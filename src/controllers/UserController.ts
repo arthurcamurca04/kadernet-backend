@@ -1,4 +1,4 @@
-import { Response, Request, response } from 'express';
+import { Response, Request } from 'express';
 import db from '../database/connection';
 import bcrypt from 'bcrypt';
 
