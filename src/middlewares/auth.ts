@@ -12,7 +12,7 @@ export default function authMiddleware(request:Request, response:Response, next:
     const authHeader = request.headers.authorization;
 
     if(!authHeader){
-        return response.status(401).json({error: "No token provided"});
+        return response.status(401).json({error: "Não foi provido nenhum token"});
     }
     
     const [bearer, token] = authHeader.split(" ");
@@ -22,6 +22,6 @@ export default function authMiddleware(request:Request, response:Response, next:
         request.user_id = user_id;
         return next();
     } catch (error) {
-        return response.status(401).json({error: "Invalid token"});        
+        return response.status(401).json({error: "Token Inválido"});        
     }
 }

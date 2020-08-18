@@ -15,5 +15,6 @@ router.post('/user', UserController.create);
 router.post('/login',LoginController.login);
 
 router.post('/annotations', authMiddleware, AnnotationsController.create);
+router.get('/annotations', authMiddleware, AnnotationsController.index);
 
 export default router;

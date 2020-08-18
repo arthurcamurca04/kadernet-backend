@@ -23,7 +23,7 @@ const LoginController = {
                         name: users[0].name
 
                     }, 'secret', {
-                        expiresIn: '1h'
+                        expiresIn: '86400'
                     })
                     return response.status(200).json({
                         msg: "Usuário autenticado com sucesso",
